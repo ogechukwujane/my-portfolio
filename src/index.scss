@@ -1,0 +1,18 @@
+@import "./styles/variables";
+
+h1,
+h2,
+h2,
+h4,
+h5,
+h6,
+p,
+div,
+body {
+  padding: 0px;
+  margin: 0px;
+}
+:root {
+  font-family: "Poppins", sans-serif;
+  background: $dark_blue;
+}

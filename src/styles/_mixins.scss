@@ -1,0 +1,16 @@
+@mixin BigText {
+  font-size: 2em;
+  line-height: 35px;
+}
+@mixin MediumText {
+  font-size: 1.5em;
+  line-height: 30px;
+}
+@mixin BaseText {
+  font-size: 1em;
+  line-height: 25px;
+}
+@mixin SmallText {
+  font-size: 0.8em;
+  line-height: 20px;
+}

@@ -1,0 +1,255 @@
+.Home {
+  width: 100%;
+  .navbar {
+    background: $dark_blue;
+    box-shadow: 0px 0px 5px $lightGray;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    z-index: 300;
+    @media (max-width: 768px) {
+      position: unset;
+    }
+  }
+  .logo_wrap {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  .logo {
+    background: $secondary;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    @include SmallText;
+    font-weight: $REGULAR;
+    color: $white;
+  }
+  .my_name {
+    @include BaseText;
+    font-weight: $BASE;
+    color: $white;
+  }
+  .desktop_nav {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  .links_container {
+    display: inline-flex;
+    column-gap: 30px;
+    .link {
+      @include BaseText;
+      font-weight: $BASE;
+      color: $gray;
+      cursor: pointer;
+    }
+    .active_link {
+      @include BaseText;
+      font-weight: $REGULAR;
+      color: $white;
+      span {
+        color: $primary;
+      }
+    }
+  }
+  .home_content {
+    display: flex;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+    .about_container {
+      width: 400px;
+      overflow: hidden;
+      @media (max-width: 768px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        overflow-x: scroll;
+      }
+      .about_content {
+        display: flex;
+        flex-direction: column;
+        margin: 40px 20px;
+        padding: 30px 20px;
+        box-shadow: 0px 0px 5px $lightGray;
+        @media (max-width: 768px) {
+          padding: 0px;
+          box-shadow: none;
+        }
+        .image_container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          @media (max-width: 768px) {
+            flex-direction: row;
+          }
+        }
+        .image_wrap {
+          min-width: 250px;
+          max-width: 250px;
+          min-height: 250px;
+          max-height: 250px;
+          border-radius: 50%;
+          overflow: hidden;
+          background: $black;
+          border-bottom: 4px solid $primary;
+          @media (max-width: 768px) {
+            min-width: 80px;
+            min-height: 80px;
+            max-width: 80px;
+            max-height: 80px;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .name {
+          @include MediumText;
+          font-weight: $SEMI_BOLD;
+          color: $white;
+        }
+        .role {
+          @include SmallText;
+          color: $gray;
+        }
+        .about_me {
+          @include BaseText;
+          margin: 20px 0px;
+          font-weight: $REGULAR;
+          color: $gray;
+        }
+      }
+    }
+
+    .mobile_navs {
+      display: none;
+      @media (max-width: 768px) {
+        display: block;
+        background: $lightBlack;
+        padding: 20px;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0px;
+        z-index: 300;
+        overflow-x: scroll;
+      }
+    }
+    .main_content::-webkit-scrollbar {
+      display: none;
+      width: 0px;
+      height: 0px;
+    }
+    .main_content {
+      width: calc(100% - 400px);
+      padding: 20px 30px;
+      height: calc(100vh - 0px);
+      overflow-y: scroll;
+      scrollbar-width: none;
+      position: relative;
+      @media (max-width: 768px) {
+        height: unset;
+        width: unset;
+        padding: 20px 15px;
+      }
+      .subHeading {
+        @include BigText;
+        color: $white;
+        font-weight: $SEMI_BOLD;
+        padding: 10px;
+        margin: 20px 0px;
+        border-left: 4px solid $primary;
+      }
+      .paragraph_wrap {
+        display: flex;
+        column-gap: 5px;
+        margin-bottom: 15px;
+        a {
+          color: $primary2;
+        }
+      }
+      .title {
+        @include MediumText;
+        color: $white2;
+        font-weight: $REGULAR;
+      }
+      .sub_title {
+        @include BaseText;
+        color: $gray;
+        font-weight: $BASE;
+      }
+      .max_width {
+        width: 150px;
+        @media (max-width: 600px) {
+          width: unset;
+        }
+      }
+      .paragraph {
+        @include BaseText;
+        color: $gray;
+        font-weight: $BASE;
+      }
+      .small_text {
+        @include SmallText;
+        color: $gray;
+        font-weight: $BASE;
+      }
+      .italic {
+        font-style: italic;
+        margin-bottom: 5px;
+      }
+      .content_wrap {
+        margin: 80px 0px;
+      }
+      .education_wrap {
+        margin: 25px 0px;
+      }
+      .experience_container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        .company_card {
+          background: $secondary;
+          padding: 20px;
+          border-radius: 0px 5px 5px;
+          overflow: hidden;
+          width: 240px;
+        }
+      }
+      .flexbox {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .skill_content {
+        margin-bottom: 70px;
+      }
+      .skill_wrap {
+        border: 1.5px solid $gray;
+        padding: 10px 20px;
+        color: $white;
+        @include BaseText;
+        font-weight: $BASE;
+      }
+    }
+  }
+  .footer {
+    @include SmallText;
+    padding: 30px 0px;
+    text-align: center;
+    color: $gray;
+    font-weight: $SMALL;
+    font-style: italic;
+  }
+}
