@@ -14,7 +14,7 @@ export const myProfile = [
   },
   {
     subtitle: "Languages:",
-    text: "English, Igbo & Hause",
+    text: "English, Igbo & Hausa",
   },
 ];
 
