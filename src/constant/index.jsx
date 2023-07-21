@@ -1,3 +1,10 @@
+import ifyPortfolio from "../assets/ify-portfolio.png";
+import quizApp from "../assets/quiz-app.png";
+import ibxApp from "../assets/ibx.png";
+import sojiApp from "../assets/soji.png";
+import giftieApp from "../assets/giftie.png";
+import evaKitchen from "../assets/eva-kitchen.png";
+
 export const links = ["Overview", "Skills", "Projects", "Contacts"];
 export const myProfile = [
   {
@@ -90,5 +97,58 @@ export const myContacts = [
     subtitle: "Phone Number:",
     text: "+2349039628923",
     url: "tel:+2349039628923",
+  },
+];
+export const myProjects = [
+  {
+    image: ibxApp,
+    tools: [
+      "React",
+      "React native",
+      "Typescript",
+      "React Bootstrap",
+      "Styled-components",
+    ],
+    title: "Ibx",
+    aboutProject: "A seamless p2p ﬁat and crypto trading app.",
+    link: "https://ibxp2p.com/",
+  },
+  {
+    image: giftieApp,
+    tools: ["Next", "SCSS", "Typescript"],
+    title: "Giftie",
+    aboutProject:
+      "An app that enables one to create Wishlist, buy and send gifts to loved ones.",
+    link: "https://giftie.africa",
+  },
+  {
+    image: sojiApp,
+    tools: ["React", "Typescript", "Styled-component"],
+    title: "Soji App",
+    aboutProject:
+      "SOJI gives you access to malls and shopping store in your region and makes your real estate experience very easy and trust",
+    link: "https://sojiapps.com/",
+  },
+  {
+    image: quizApp,
+    tools: ["React", "Typescript", "Styled-component"],
+    title: "Okonor Quiz App",
+    aboutProject:
+      "An educational system that enables students register and take exams or quiz on different subjects.",
+    link: "https://okonorlistic.com",
+  },
+  {
+    image: ifyPortfolio,
+    tools: ["React", "Styled-component"],
+    title: "Portfolio Website",
+    aboutProject: "A functional responsive portfolio site crafted for a client",
+    link: "https://ifunanya.vercel.app",
+  },
+  {
+    image: evaKitchen,
+    tools: ["React native"],
+    title: "Eva Kitchen",
+    aboutProject: "A food ordering app for Hot and Fresh food",
+    link: "https://play.google.com/store/apps/details?id=com.evakitchen_mobile",
   },
 ];

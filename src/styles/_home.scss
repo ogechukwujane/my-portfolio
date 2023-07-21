@@ -154,7 +154,7 @@
     .main_content {
       width: calc(100% - 400px);
       padding: 20px 30px;
-      height: calc(100vh - 0px);
+     height: calc(110vh - 0px);
       overflow-y: scroll;
       scrollbar-width: none;
       position: relative;
@@ -197,7 +197,7 @@
       }
       .paragraph {
         @include BaseText;
-        color: $gray;
+        color: $white2;
         font-weight: $BASE;
       }
       .small_text {
@@ -212,19 +212,21 @@
       .content_wrap {
         margin: 80px 0px;
       }
-      .education_wrap {
-        margin: 25px 0px;
-      }
       .experience_container {
         display: flex;
-        gap: 20px;
+        column-gap: 15px;
+        row-gap: 30px;
         flex-wrap: wrap;
+        max-width: 1440px;
         .company_card {
           background: $secondary;
           padding: 20px;
           border-radius: 0px 5px 5px;
           overflow: hidden;
-          width: 240px;
+          width: calc(50% - 50px);
+          @media (max-width: 600px) {
+            width: 100%;
+          }
         }
       }
       .flexbox {
@@ -241,6 +243,86 @@
         color: $white;
         @include BaseText;
         font-weight: $BASE;
+      }
+      .project_container {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 15px;
+        row-gap: 30px;
+        max-width: 1440px;
+        margin-top: 20px;
+        .project_card {
+          border: 2px solid $white2;
+          width: calc(50% - 15px);
+          @media (max-width: 600px) {
+            width: 100%;
+          }
+          .project_card_image {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            .project_image {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .project_tool {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            column-gap: 10px;
+            padding: 8px;
+            border-top: 2px solid $white2;
+            border-bottom: 2px solid $white2;
+            p {
+              @include BaseText;
+              font-weight: $SMALL;
+              color: $gray;
+            }
+          }
+          .about_project {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            justify-content: space-between;
+            .project_header {
+              @include MediumText;
+              font-weight: $REGULAR;
+              color: $gray;
+            }
+            p {
+              @include BaseText;
+              font-weight: $SMALL;
+              color: $gray;
+            }
+            a {
+              @include BaseText;
+              padding: 10px;
+              border-radius: 5px;
+              border: none;
+              font-weight: $SEMI_BOLD;
+              background: $lightBlack;
+              background: $secondary1;
+              color: $gray;
+              box-shadow: 3px 3px 2px $secondary;
+              cursor: pointer;
+              text-align: center;
+              text-decoration: none;
+            }
+          }
+        }
+        .project_card:hover {
+          .about_project {
+            p,
+            a,
+            .project_tool {
+              transition: 0.6s ease-in-out;
+              color: $white;
+            }
+          }
+        }
       }
     }
   }

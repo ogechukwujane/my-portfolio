@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import MyPicture from "../assets/oge2.jpg";
 import S from "../styles/index.module.scss";
 import {
-  educations,
   experiences,
   myProfile,
   links,
@@ -11,6 +10,7 @@ import {
   tools,
   others,
   myContacts,
+  myProjects,
 } from "../constant";
 
 export const Home = () => {
@@ -51,8 +51,10 @@ export const Home = () => {
               </div>
             </div>
             <p className={S.about_me}>
-              I am an enthusiastic frontend developer with experience working
-              with React, Next and Vue. I...
+              I am an enthusiastic frontend developer with proven experience in
+              crafting modern web applications. I'm goal driven,
+              industrious and love human interaction. Problem solving is one
+              thing I love doing. I am interested in freelance opportunities. Contact me and you will be happy  you did.
             </p>
           </div>
         </div>
@@ -86,23 +88,10 @@ export const Home = () => {
                 ))}
               </div>
               <div className={S.content_wrap}>
-                <p className={S.subHeading}>Education:</p>
-                {educations.map((education) => (
-                  <div key={education.school} className={S.education_wrap}>
-                    <p className={S.title}>{education.school}</p>
-                    <p className={`${S.small_text} ${S.italic}`}>
-                      {education.institution}
-                    </p>
-                    <p className={S.paragraph}>{education.course}</p>
-                    <p className={S.small_text}>{education.duration}</p>
-                  </div>
-                ))}
-              </div>
-              <div className={S.content_wrap}>
                 <p className={S.subHeading}>Work Experience:</p>
                 <div className={S.experience_container}>
-                  {experiences.map((experience) => (
-                    <div className={S.company_card}>
+                  {experiences.map((experience, i) => (
+                    <div className={S.company_card} key={i}>
                       <p className={S.title}>{experience.company}</p>
                       <p className={`${S.small_text} ${S.italic}`}>
                         {experience.city}
@@ -159,6 +148,35 @@ export const Home = () => {
                   ))}
                 </div>
               </div>
+            </div>
+          )}
+
+          {/* projects */}
+          {active === "Projects" && (
+            <div className={S.project_container}>
+              {myProjects.map((project) => (
+                <div className={S.project_card}>
+                  <div className={S.project_card_image}>
+                    <img
+                      src={project.image}
+                      alt=""
+                      className={S.project_image}
+                    />
+                  </div>
+                  <div className={S.project_tool}>
+                    {project.tools.map((tool) => (
+                      <p>{tool}</p>
+                    ))}
+                  </div>
+                  <div className={S.about_project}>
+                    <p className={S.project_header}>{project.title}</p>
+                    <p>{project.aboutProject}</p>
+                    <a href={project.link} target="_blank">
+                      view
+                    </a>
+                  </div>
+                </div>
+              ))}
             </div>
           )}
 
