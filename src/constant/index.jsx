@@ -45,10 +45,16 @@ export const educations = [
 ];
 export const experiences = [
   {
+    company: "Upperlink Limited",
+    city: "Lagos",
+    role: "Frontend Developer",
+    duration: "June 2023 - Present",
+  },
+  {
     company: "First Bank of Nigeria",
     city: "Lagos",
     role: "RPA/Frontend Developer",
-    duration: "March 2022 - March 2023",
+    duration: "March 2022 - May 2023",
   },
   {
     company: "Vivvaa Solution",
